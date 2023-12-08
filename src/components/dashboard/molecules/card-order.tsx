@@ -61,8 +61,6 @@ const CardOrder: React.FC<CardOrderProps> = ({ isCollapsed, order }) => {
     };
   };
 
-  console.log("order", order);
-
   const handleDisableStyle = () => {
     return order?.orderStatus === OrderStatus.CANCELLED ||
       order?.orderStatus === OrderStatus.COMPLETED

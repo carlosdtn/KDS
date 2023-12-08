@@ -36,3 +36,8 @@ export enum Filter {
   IN_PROCESS = "EN PROCESO",
   COMPLETED = "COMPLETADO",
 }
+
+export type Dish = {
+  label: string;
+  value: string;
+};

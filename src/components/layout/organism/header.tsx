@@ -1,6 +1,7 @@
 import { IconPlus } from "@tabler/icons-react";
 import { setFilter } from "../../../redux/features/filter-slice";
-import { useAppDispatch } from "../../../redux/hooks";
+import { toggleOptions } from "../../../redux/features/options-slice";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { Filter, OrderStatus } from "../../../utils/types";
 import Button from "../../ui/button";
 import {
@@ -13,11 +14,15 @@ import {
 
 const Header = () => {
   const dispatch = useAppDispatch();
+  const option = useAppSelector((state) => state.options.isOpen);
 
   return (
     <HeaderContainer>
       <GroupedTabs>
-        <Button variant="header">
+        <Button
+          variant="header"
+          onClick={() => dispatch(toggleOptions({ isOpen: !option }))}
+        >
           <IconPlus size={20} color="black" />
           <span>Agregar orden</span>
         </Button>

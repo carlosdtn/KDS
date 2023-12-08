@@ -23,6 +23,7 @@ export const OrderSlice = createSlice({
   reducers: {
     addOrder: (state, action: PayloadAction<Order>) => {
       state.push(action.payload);
+      db.saveOrder(action.payload);
     },
     changeStatus: (
       state,
