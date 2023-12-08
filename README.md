@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# Kitchen Display System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Tecnologías Utilizadas
 
-Currently, two official plugins are available:
+- React.js
+- Styled Components
+- React Hooks
+- Redux
+- Dexie
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Básico Completado
 
-## Expanding the ESLint configuration
+- Usar componentes funcionales de React.
+- Usar React Hooks.
+- Usar Redux para el manejo de estados.
+- Usar Styled Components para el manejo de estilos.
+- Interfaz intutiva y amigable.
+- Detalles de pedido.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Extras Completados
 
-- Configure the top-level `parserOptions` property like this:
+- Visualización de pedidos en tiempo real.
+- Funcionalidad de filtrado de pedidos.
+- Funcionalidad de gestión de pedidos.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+---
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Valor Agregado
+
+- Uso de Dexie para el manejo de la base de datos(IndexedDB).
+- Interfaz Responsive.
+- Funcionalidad para agregar nuevos pedidos.
