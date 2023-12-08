@@ -45,7 +45,7 @@ export const OrderSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getData.fulfilled, (state, action) => {
+    builder.addCase(getData.fulfilled, (_state, action) => {
       return action.payload;
     });
   },
