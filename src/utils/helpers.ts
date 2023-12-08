@@ -20,12 +20,12 @@ export const getOrderStatusColor = (orderStatus: string) => {
 export const addZeros = (tableNumber: number) => {
   return tableNumber < 10 ? `0${tableNumber}` : tableNumber;
 };
-
-export const formattedTime = (date: Date | null) => {
-  if (!date) return "-";
-  const hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-  const minutes =
-    date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
-  const time = `${hours}:${minutes}`;
-  return time;
+export const formattedTime = (date: string | null) => {
+  if (!date) return "";
+  const time = new Date(date);
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  return `${hours < 10 ? `0${hours}` : hours}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  }`;
 };

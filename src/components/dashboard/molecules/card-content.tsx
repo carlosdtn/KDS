@@ -7,7 +7,7 @@ interface CardContentProps {
 
 const CardContent: React.FC<CardContentProps> = ({ children, isCollapse }) => {
   return (
-    <CardContentContainer isCollapsed={isCollapse}>
+    <CardContentContainer $isCollapsed={isCollapse}>
       {children}
     </CardContentContainer>
   );

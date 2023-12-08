@@ -3,8 +3,8 @@ import { getOrderStatusColor } from "../../../utils/helpers";
 import { OrderStatus } from "../../../utils/types";
 
 interface CardOrderContainerProps {
-  isCollapsed: boolean;
-  orderStatus: OrderStatus;
+  $isCollapsed: boolean;
+  $orderStatus: OrderStatus;
 }
 
 const baseStyles = css`
@@ -18,10 +18,10 @@ const baseStyles = css`
 export const CardOrderContainer = styled.div<CardOrderContainerProps>`
   ${baseStyles}
   background-color: #fff;
-  height: ${({ isCollapsed }) => (isCollapsed ? "17.5rem" : "auto")};
+  height: ${({ $isCollapsed }) => ($isCollapsed ? "17.5rem" : "auto")};
   padding-bottom: 1rem;
   overflow: hidden;
   min-width: 20rem;
   border-top: 10px solid
-    var(${({ orderStatus }) => getOrderStatusColor(orderStatus)});
+    ${({ $orderStatus }) => css`var(${getOrderStatusColor($orderStatus)})`};
 `;

@@ -2,9 +2,9 @@ export interface Order {
   tableNumber: number;
   orderItems: { product: string; quantity: number }[];
   orderStatus: OrderStatus;
-  timeOrderTaken: Date;
-  timeOrderInProcess: Date;
-  timeOrderCompleted: Date;
+  timeOrderTaken: string;
+  timeOrderInProcess: string;
+  timeOrderCompleted: string;
 }
 
 export enum OrderStatus {
@@ -18,4 +18,21 @@ export enum OrderStatus {
 export enum Role {
   CHEF = "CHEF",
   WAITER = "WAITER",
+}
+
+export type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "danger"
+  | "process"
+  | "completed"
+  | "pending"
+  | "disabled"
+  | "header";
+
+export enum Filter {
+  ALL = "TODO",
+  PENDING = "PENDIENTE",
+  IN_PROCESS = "EN PROCESO",
+  COMPLETED = "COMPLETADO",
 }

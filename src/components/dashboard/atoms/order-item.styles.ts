@@ -7,7 +7,6 @@ export const OrderItemContainer = styled.div`
   justify-content: space-between;
   padding: 0.8rem;
   border-bottom: 1px solid #e0e0e0;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
